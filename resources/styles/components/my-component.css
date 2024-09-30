@@ -1,0 +1,9 @@
+.my-component {
+  border: 1px rgb(121 28 118) solid;
+  border-radius: 16px;
+  background-color: green;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}

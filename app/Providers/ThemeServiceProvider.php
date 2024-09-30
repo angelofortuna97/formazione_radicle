@@ -47,6 +47,12 @@ class ThemeServiceProvider extends SageServiceProvider
                     array_merge(config('theme.sidebar.config'), $instance)
                 ));
         });
+
+        add_action('after_setup_theme', function() {
+            register_nav_menus([
+                'main_navigation' => __('Main Navigation', 'sage'),
+            ]);
+        });
     }
 
     /**

@@ -36,10 +36,6 @@ export const edit = ({attributes, setAttributes}) => {
   const handleSurnameChange = (surnameText: string) => setAttributes({ surnameText });
   const handleEmailChange = (emailText: string) => setAttributes({ emailText });
 
-  // const handleClick = () => {
-  //   alert(`Email: ${emailText}`);
-  // };
-
   return (
     <div {...blockProps}>
       <TextControl

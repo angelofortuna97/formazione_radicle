@@ -1,0 +1,49 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.toolbar-container {
+  width: 100%;
+  height: 88px;
+  display: flex;
+  color: black;
+
+  .toolbar-top {
+    height: 32px;
+    width: 100%;
+    padding: 4px 48px;
+    display: flex;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 8px 48px;
+
+    #airport_ct_logo {
+      margin-right: 30px;
+    }
+
+    .nav {
+      list-style: none;
+      display: flex;
+
+      li {
+        margin-right: 20px;
+
+        a {
+          color: theme('colors.primary.green800');
+          text-decoration: none;
+
+          &:hover {
+            color: theme('colors.primary.green700');
+          }
+        }
+
+        .icon {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/acf.php';
+
 return [
     /**
      * Navigation menus
@@ -9,6 +11,7 @@ return [
     'menus' => [
         'primary_navigation' => __('Primary Navigation', 'radicle'),
         'footer_navigation' => __('Footer Navigation', 'radicle'),
+        'custom_navigation' => __('Custom Navigation', 'radicle'),
     ],
 
     /**
@@ -100,5 +103,26 @@ return [
          * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-the-default-block-patterns
          */
         'core-block-patterns',
+    ],
+    /**
+     * Theme Assets
+     */
+    'assets' => [
+        'styles' => [
+            'app' => [
+                'uri' => get_template_directory_uri() . '/resources/styles/app.css',
+                'deps' => [],
+                'ver' => null,
+                'media' => 'all',
+            ],
+        ],
+        'scripts' => [
+            'app' => [
+                'uri' => get_template_directory_uri() . '/resources/scripts/app.js',
+                'deps' => [],
+                'ver' => null,
+                'in_footer' => true,
+            ],
+        ],
     ],
 ];

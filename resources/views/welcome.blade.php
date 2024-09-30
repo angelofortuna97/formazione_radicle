@@ -54,12 +54,12 @@
     <div class="my-6 bg-gray-100 p-6 relative">
         <pre class="mb-6"><code class="language-blade">&lt;x-modal title="Modal Title"&gt;
     &lt;x-slot name="button"&gt;Open modal&lt;/x-slot&gt;
-    Example modal
+    Example modal!!
 &lt;/x-modal&gt;</code></pre>
 
         <x-modal title="Modal Title">
             <x-slot name="button">Open modal</x-slot>
-            Example modal
+            Example modal!!
         </x-modal>
     </div>
 

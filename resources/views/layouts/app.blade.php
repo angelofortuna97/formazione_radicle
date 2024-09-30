@@ -1,8 +1,16 @@
+<?php
+$menu_name = 'primary_navigation';
+$locations = get_nav_menu_locations();
+$menu = wp_get_nav_menu_object($locations[$menu_name]);
+$menu_items = wp_get_nav_menu_items($menu->term_id);
+?>
+
 <!doctype html>
-<html @php(language_attributes())>
+<html @php(language_attributes()) lang="it">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Radicle Test</title>
         @php(do_action('get_header'))
         @php(wp_head())
         @include('utils.styles')
@@ -12,6 +20,10 @@
         @php(wp_body_open())
 
         <div id="app">
+<!--            <header style="background-color: green">-->
+                @include('partials.custom-menu', ['$menu_items' => $menu_items])
+<!--            </header>-->
+
             <a class="sr-only focus:not-sr-only" href="#main">
                 {{ __('Skip to content', 'radicle') }}
             </a>
@@ -24,7 +36,7 @@
                 </div>
             </main>
 
-            @include('sections.footer')
+{{--            @include('sections.footer')--}}
         </div>
 
         @php(do_action('get_footer'))

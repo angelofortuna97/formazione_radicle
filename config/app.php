@@ -166,6 +166,7 @@ return [
          * Application Service Providers...
          */
         // App\Providers\ThemeServiceProvider::class,
+//        App\Providers\PostTypeServiceProvider::class,
     ])->toArray(),
 
     /*

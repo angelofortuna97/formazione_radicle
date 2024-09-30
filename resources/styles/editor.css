@@ -1,4 +1,7 @@
 @import 'tailwindcss/utilities';
+@import "common/fonts.css";
+@import 'components/my-component.css';
+@import 'components/custom-menu.css';
 
 * {
   border: 0 solid #e5e7eb;
