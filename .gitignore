@@ -29,9 +29,6 @@ wp-config.php
 # Uploads
 /wp-content/uploads/
 
-# Log files
-*.log
-
 # htaccess
 /.htaccess
 
@@ -46,3 +43,42 @@ wp-config.php
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
+# Application
+public/content/plugins/*
+!public/content/plugins/.gitkeep
+public/content/mu-plugins/*/
+!public/content/mu-plugins/editor/
+public/content/upgrade
+public/content/uploads/*
+!public/content/uploads/.gitkeep
+public/content/cache/*
+public/dist/*
+
+# WordPress
+public/wp
+public/.htaccess
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+
+# WP-CLI
+wp-cli.local.yml
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+
+# VS Code
+.vscode/settings.json
+
+# Bud
+storage/bud/*
